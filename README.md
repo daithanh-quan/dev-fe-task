@@ -1,6 +1,33 @@
 # Posts Explorer - Frontend Development Challenge
 
-A complete Next.js 14 application serving as the foundation for a frontend development assessment. Your task is to extend this working application with 4 additional features to demonstrate your React/Next.js expertise.
+A complete Next.js 14 application serving as the foundation for a frontend development assessment. Your task is to extend this working application with 4 additional features to demonstrate your Reac##### **🎨 Extension 1: Figma Design Implementation (REQUIRED)**
+- **Requirement**: Redesign the blog list and blog detail pages to match the provided Figma design
+- **Figma Design**: [Blog Website Design](https://www.figma.com/design/Ek4V5LIZeWRoH94QzBx79F/blog-website-design---mobile-app-design--Community-?node-id=0-1&p=f)
+- **Implementation Details**:
+  - **Blog List Page**: Redesign the posts listing to match Figma layout
+    - Update post cards with proper styling, cover images, and typography  
+    - Implement the exact layout, spacing, and visual hierarchy from Figma
+    - Add search functionality with the design specified in Figma
+    - Ensure responsive design matches mobile and desktop variants
+    - Include user avatars, post metadata (read time, tags, publish date)
+  - **Blog Detail Page**: Redesign individual post pages to match Figma
+    - Hero section with cover image and post metadata
+    - Proper typography and content layout
+    - Author section with avatar and bio
+    - Comments section styling
+    - Back navigation and related posts (if shown in Figma)
+  - **Search Functionality**: Implement search as designed in Figma
+    - Search input styling and placement
+    - Search results layout and empty states
+    - Real-time search with debouncing
+    - URL persistence (`?search=query`)
+- **Expected Files to Modify**: 
+  - `app/posts/page.tsx` - Blog list redesign
+  - `app/posts/[id]/page.tsx` - Blog detail redesign  
+  - `components/PostCard.tsx` - Updated post card design
+  - `components/` - New search component
+  - `app/globals.css` - Updated styling to match Figma
+  - `lib/api.ts` - Use enhanced post data with cover images and metadatatension 1: Figma Design Implementation (REQUIRED)**ext.js expertise.
 
 ## 🎯 **Challenge Overview**
 
@@ -33,9 +60,9 @@ This repository contains a **complete working implementation** of a Posts Explor
 - ✅ Testing framework setup
 - ✅ Code quality tools (ESLint/Prettier)
 
-## 🎯 **Your Challenge: Implement ALL 4 Extensions**
+## 🎯 **Your Challenge: Implement 2 Key Extensions**
 
-Since the base application is complete, your task is to **extend** it by implementing **ALL** of the following features:
+Since the base application is complete, your task is to **enhance** it by implementing **BOTH** of the following requirements:
 
 ## 🛠️ Installation
 
@@ -98,6 +125,7 @@ The application uses the [JSONPlaceholder API](https://jsonplaceholder.typicode.
 ### Available API Functions (lib/api.ts)
 
 ```typescript
+// Core API functions
 fetchPosts()           // Get all posts
 fetchPost(id)          // Get single post
 fetchUsers()           // Get all users
@@ -105,6 +133,13 @@ fetchUser(id)          // Get single user
 fetchComments(postId)  // Get post comments
 fetchPostsByUser(userId) // Get posts by user
 paginatePosts(posts, page, limit) // Utility for pagination
+
+// Enhanced UI data functions (use these for Figma implementation)
+enhancePost(post)      // Add cover images, tags, read time, publish date
+enhanceUser(user)      // Add avatar, bio, post count
+getUserAvatar(userId)  // Get user avatar URL
+getPostCoverImage(postId, title) // Get post cover image URL
+getPostThumbnail(postId, title)  // Get post thumbnail URL
 ```
 
 ## 🎨 Styling
@@ -259,53 +294,53 @@ Built with ❤️ using Next.js, TypeScript, and modern React patterns.
   - Clear search functionality
 - **Expected Files to Modify**: `app/posts/page.tsx`, `components/` (new SearchInput component)
 
-### **⚡ Extension 2: Optimistic Updates (REQUIRED)**  
-- **Requirement**: Implement optimistic UI updates for better user experience
-- **Implementation Details**:
-  - When navigating between pages, show loading skeletons instead of blank states
-  - Pre-fetch next/previous page data on hover
-  - Add optimistic state updates for user interactions
-  - Implement proper error boundaries with retry mechanisms
-- **Expected Files to Modify**: `app/posts/page.tsx`, `components/` (new Skeleton components)
-
-### **🎨 Extension 3: Enhanced Animations (REQUIRED)**
-- **Requirement**: Add smooth animations and transitions throughout the app
-- **Implementation Details**:
-  - Page transition animations (fade in/out between routes)
-  - Card hover effects and micro-interactions
-  - Loading state animations (spinners, skeleton screens)
-  - Pagination animation effects
-  - Use CSS animations or a library like Framer Motion
-- **Expected Files to Modify**: `app/globals.css`, component files, potentially new animation utilities
-
-### **🧪 Extension 4: End-to-End Testing (REQUIRED)**
+### **🧪 Extension 2: End-to-End Testing (REQUIRED)**
 - **Requirement**: Add comprehensive E2E tests using Playwright or similar
 - **Implementation Details**:
-  - Test complete user flows (browsing posts, pagination, filtering, search)
-  - Test responsive design on different screen sizes
-  - Test API error handling scenarios
-  - Add at least 5 comprehensive E2E test scenarios
-  - Include CI/CD integration for test running
-- **Expected Files to Create**: `e2e/` directory with test files, `playwright.config.ts`
+  - **Core User Flows**: Test complete user journeys
+    - Browse posts list and pagination
+    - Search for posts and verify results
+    - Navigate to post details and back
+    - Filter posts by user
+    - Test responsive design on mobile/tablet/desktop
+  - **Edge Cases**: Test error handling and edge scenarios
+    - Invalid post IDs (404 handling)
+    - Empty search results
+    - Network errors and retry mechanisms
+    - Loading states and skeleton screens
+  - **Visual Testing**: Ensure design matches Figma
+    - Screenshot comparison tests
+    - Layout and spacing validation
+    - Responsive breakpoint testing
+  - **Performance**: Basic performance validations
+    - Page load times
+    - Image loading and optimization
+- **Expected Files to Create**: 
+  - `e2e/` directory with test files
+  - `playwright.config.ts` configuration
+  - `package.json` updated with E2E scripts
+  - GitHub Actions workflow for CI/CD testing (optional bonus)
 
 ## 📝 **Submission Requirements**
 
 ### **What You Must Deliver:**
-1. **All 4 extensions implemented** and working
-2. **Updated tests** covering your new features
-3. **Documentation** explaining your implementation approach
-4. **Git commits** showing your development process
-5. **Live deployment** (Vercel/Netlify) with all features working
+1. **Both extensions implemented** and working perfectly
+2. **Pixel-perfect Figma implementation** - Design must match exactly
+3. **Comprehensive E2E test suite** with good coverage
+4. **Updated documentation** explaining your implementation approach
+5. **Clean git commits** showing your development process
+6. **Live deployment** (Vercel/Netlify) with all features working
 
 ### **Evaluation Criteria:**
-- **Functionality** (40%) - All 4 extensions work correctly
+- **Design Implementation** (50%) - How accurately the Figma design is implemented
 - **Code Quality** (25%) - Clean, maintainable, TypeScript code
-- **User Experience** (20%) - Smooth interactions and good design
-- **Testing** (15%) - Comprehensive test coverage including E2E
+- **Testing** (20%) - Comprehensive E2E test coverage and quality
+- **User Experience** (5%) - Smooth interactions and responsiveness
 
 ## ⏰ **Time Expectation**
 - **Estimated Time**: 4-6 hours for an experienced developer
-- **Focus Areas**: Extension implementation, testing, and documentation
+- **Focus Areas**: Figma design implementation (70%), E2E testing (30%)
+- **Priority**: Design accuracy is most important - ensure pixel-perfect match
 
 ## 🤔 **Need Help?**
 
