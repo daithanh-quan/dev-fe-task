@@ -254,8 +254,3 @@ npm run build
   - `package.json` updated with E2E scripts
   - GitHub Actions workflow for CI/CD testing (optional bonus)
 
-## 🤔 **Need Help?**
-
-If you have questions about the requirements, feel free to:
-- Create an issue in this repository  
-- Email us at: admin@cvtot.vn
