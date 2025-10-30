@@ -2,6 +2,7 @@
   "name": "posts-explorer",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "A Next.js Posts Explorer application for frontend take-home challenges",
   "scripts": {
     "dev": "next dev",
