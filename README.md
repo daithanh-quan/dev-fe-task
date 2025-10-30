@@ -229,12 +229,6 @@ npm run build
 - Verify responsive breakpoints
 - Test on multiple devices/browsers
 
-## 📄 License
-
-This starter template is provided as-is for educational and development purposes.
-
----
-
 ## 🎯 **Your Challenge: Implement 2 Key Extensions**
 
 ### **� Extension 1: Render New UI (REQUIRED)**
