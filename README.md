@@ -1,8 +1,12 @@
-# Posts Explorer - Next.js Starter Template
+# Posts Explorer - Frontend Development Challenge
 
-A complete Next.js 14 starter template for building a posts explorer application with pagination, filtering, and user management features. This template demonstrates best practices for React development, TypeScript usage, and testing patterns.
+A complete Next.js 14 application serving as the foundation for a frontend development assessment. Your task is to extend this working application with 4 additional features to demonstrate your React/Next.js expertise.
 
-## 🚀 Features
+## 🎯 **Challenge Overview**
+
+This is a **working Posts Explorer application** that already includes core functionality. Your job is to **extend it** with advanced features that showcase your frontend development skills.
+
+## 🚀 Existing Features (Already Implemented)
 
 - **Next.js 14 App Router** - Modern React framework with server-side rendering
 - **TypeScript** - Full type safety and better developer experience
@@ -14,10 +18,13 @@ A complete Next.js 14 starter template for building a posts explorer application
 - **Code Quality** - ESLint and Prettier for consistent code formatting
 - **Accessibility** - ARIA labels and semantic HTML
 
-## 📋 Requirements Met
+## ✅ **Current Implementation Status**
 
+This repository contains a **complete working implementation** of a Posts Explorer with the following features already built:
+
+### **✅ Implemented Features**
 - ✅ Next.js 14 with App Router
-- ✅ TypeScript configuration
+- ✅ TypeScript configuration  
 - ✅ Posts list with pagination (10 posts per page)
 - ✅ Individual post detail pages
 - ✅ User filtering functionality
@@ -25,6 +32,10 @@ A complete Next.js 14 starter template for building a posts explorer application
 - ✅ API integration with error handling
 - ✅ Testing framework setup
 - ✅ Code quality tools (ESLint/Prettier)
+
+## 🎯 **Your Challenge: Implement ALL 4 Extensions**
+
+Since the base application is complete, your task is to **extend** it by implementing **ALL** of the following features:
 
 ## 🛠️ Installation
 
@@ -238,18 +249,68 @@ This starter template is provided as-is for educational and development purposes
 Built with ❤️ using Next.js, TypeScript, and modern React patterns.
 - [ ] README updated (if needed)
 
-## 💡 Bonus Points
+### **� Extension 1: Search Functionality (REQUIRED)**
+- **Requirement**: Add a search input that allows users to search posts by title or content
+- **Implementation Details**:
+  - Add search input component in the posts list page header
+  - Filter posts in real-time as user types (debounced)
+  - Persist search query in URL (`?search=query`)
+  - Show "No results found" state when search returns empty
+  - Clear search functionality
+- **Expected Files to Modify**: `app/posts/page.tsx`, `components/` (new SearchInput component)
 
-- Add search functionality
-- Implement optimistic updates
-- Add animations/transitions
-- Include E2E tests
-- Deploy to Vercel/Netlify
+### **⚡ Extension 2: Optimistic Updates (REQUIRED)**  
+- **Requirement**: Implement optimistic UI updates for better user experience
+- **Implementation Details**:
+  - When navigating between pages, show loading skeletons instead of blank states
+  - Pre-fetch next/previous page data on hover
+  - Add optimistic state updates for user interactions
+  - Implement proper error boundaries with retry mechanisms
+- **Expected Files to Modify**: `app/posts/page.tsx`, `components/` (new Skeleton components)
 
-## 🤔 Need Help?
+### **🎨 Extension 3: Enhanced Animations (REQUIRED)**
+- **Requirement**: Add smooth animations and transitions throughout the app
+- **Implementation Details**:
+  - Page transition animations (fade in/out between routes)
+  - Card hover effects and micro-interactions
+  - Loading state animations (spinners, skeleton screens)
+  - Pagination animation effects
+  - Use CSS animations or a library like Framer Motion
+- **Expected Files to Modify**: `app/globals.css`, component files, potentially new animation utilities
+
+### **🧪 Extension 4: End-to-End Testing (REQUIRED)**
+- **Requirement**: Add comprehensive E2E tests using Playwright or similar
+- **Implementation Details**:
+  - Test complete user flows (browsing posts, pagination, filtering, search)
+  - Test responsive design on different screen sizes
+  - Test API error handling scenarios
+  - Add at least 5 comprehensive E2E test scenarios
+  - Include CI/CD integration for test running
+- **Expected Files to Create**: `e2e/` directory with test files, `playwright.config.ts`
+
+## 📝 **Submission Requirements**
+
+### **What You Must Deliver:**
+1. **All 4 extensions implemented** and working
+2. **Updated tests** covering your new features
+3. **Documentation** explaining your implementation approach
+4. **Git commits** showing your development process
+5. **Live deployment** (Vercel/Netlify) with all features working
+
+### **Evaluation Criteria:**
+- **Functionality** (40%) - All 4 extensions work correctly
+- **Code Quality** (25%) - Clean, maintainable, TypeScript code
+- **User Experience** (20%) - Smooth interactions and good design
+- **Testing** (15%) - Comprehensive test coverage including E2E
+
+## ⏰ **Time Expectation**
+- **Estimated Time**: 4-6 hours for an experienced developer
+- **Focus Areas**: Extension implementation, testing, and documentation
+
+## 🤔 **Need Help?**
 
 If you have questions about the requirements, feel free to:
-- Create an issue in this repository
+- Create an issue in this repository  
 - Email us at: admin@cvtot.vn
 
-Good luck! We're excited to see your implementation. 🚀
+**Good luck! We're excited to see how you extend this application. 🚀**
