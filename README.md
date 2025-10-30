@@ -231,11 +231,11 @@ npm run build
 
 ## 🎯 **Your Challenge: Implement 2 Key Extensions**
 
-### **� Extension 1: Render New UI (REQUIRED)**
+### **Extension 1: Render New UI (REQUIRED)**
 - **Requirement**: Redesign the blog list and blog detail pages to match the provided Figma design
 - **Figma Design**: [Blog Website Design](https://www.figma.com/design/Ek4V5LIZeWRoH94QzBx79F/blog-website-design---mobile-app-design--Community-?node-id=0-1&p=f)
 
-### **🧪 Extension 2: End-to-End Testing (REQUIRED)**
+### **Extension 2: End-to-End Testing (REQUIRED)**
 - **Requirement**: Add comprehensive E2E tests using Playwright or similar
 - **Implementation Details**:
   - **Core Flows**: Test complete user journeys
