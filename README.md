@@ -1,9 +1,7 @@
 # Posts Explorer - Frontend Development Challenge
 
 A complete Next.js 14 application serving as the foundation for a frontend development assessment. Your task is to extend this working application with 4 additional features to demonstrate your Reac##### **🎨 Extension 1: Figma Design Implementation (REQUIRED)**
-- **Requirement**: Redesign the blog list and blog detail pages to match the provided Figma design
-- **Figma Design**: [Blog Website Design](https://www.figma.com/design/Ek4V5LIZeWRoH94QzBx79F/blog-website-design---mobile-app-design--Community-?node-id=0-1&p=f)
-- **Implementation Details**:
+- **Features Details**:
   - **Blog List Page**: Redesign the posts listing to match Figma layout
     - Update post cards with proper styling, cover images, and typography  
     - Implement the exact layout, spacing, and visual hierarchy from Figma
@@ -21,48 +19,6 @@ A complete Next.js 14 application serving as the foundation for a frontend devel
     - Search results layout and empty states
     - Real-time search with debouncing
     - URL persistence (`?search=query`)
-- **Expected Files to Modify**: 
-  - `app/posts/page.tsx` - Blog list redesign
-  - `app/posts/[id]/page.tsx` - Blog detail redesign  
-  - `components/PostCard.tsx` - Updated post card design
-  - `components/` - New search component
-  - `app/globals.css` - Updated styling to match Figma
-  - `lib/api.ts` - Use enhanced post data with cover images and metadatatension 1: Figma Design Implementation (REQUIRED)**ext.js expertise.
-
-## 🎯 **Challenge Overview**
-
-This is a **working Posts Explorer application** that already includes core functionality. Your job is to **extend it** with advanced features that showcase your frontend development skills.
-
-## 🚀 Existing Features (Already Implemented)
-
-- **Next.js 14 App Router** - Modern React framework with server-side rendering
-- **TypeScript** - Full type safety and better developer experience
-- **Responsive Design** - Mobile-first approach with CSS Grid and Flexbox
-- **API Integration** - JSONPlaceholder API for realistic data fetching
-- **Pagination** - Client-side pagination with URL state management
-- **User Filtering** - Filter posts by user with persistent state
-- **Testing Setup** - Jest and React Testing Library configuration
-- **Code Quality** - ESLint and Prettier for consistent code formatting
-- **Accessibility** - ARIA labels and semantic HTML
-
-## ✅ **Current Implementation Status**
-
-This repository contains a **complete working implementation** of a Posts Explorer with the following features already built:
-
-### **✅ Implemented Features**
-- ✅ Next.js 14 with App Router
-- ✅ TypeScript configuration  
-- ✅ Posts list with pagination (10 posts per page)
-- ✅ Individual post detail pages
-- ✅ User filtering functionality
-- ✅ Responsive design
-- ✅ API integration with error handling
-- ✅ Testing framework setup
-- ✅ Code quality tools (ESLint/Prettier)
-
-## 🎯 **Your Challenge: Implement 2 Key Extensions**
-
-Since the base application is complete, your task is to **enhance** it by implementing **BOTH** of the following requirements:
 
 ## 🛠️ Installation
 
@@ -279,73 +235,33 @@ This starter template is provided as-is for educational and development purposes
 
 ---
 
-**Happy Coding! 🎉**
+## 🎯 **Your Challenge: Implement 2 Key Extensions**
 
-Built with ❤️ using Next.js, TypeScript, and modern React patterns.
-- [ ] README updated (if needed)
-
-### **� Extension 1: Search Functionality (REQUIRED)**
-- **Requirement**: Add a search input that allows users to search posts by title or content
-- **Implementation Details**:
-  - Add search input component in the posts list page header
-  - Filter posts in real-time as user types (debounced)
-  - Persist search query in URL (`?search=query`)
-  - Show "No results found" state when search returns empty
-  - Clear search functionality
-- **Expected Files to Modify**: `app/posts/page.tsx`, `components/` (new SearchInput component)
+### **� Extension 1: Render New UI (REQUIRED)**
+- **Requirement**: Redesign the blog list and blog detail pages to match the provided Figma design
+- **Figma Design**: [Blog Website Design](https://www.figma.com/design/Ek4V5LIZeWRoH94QzBx79F/blog-website-design---mobile-app-design--Community-?node-id=0-1&p=f)
 
 ### **🧪 Extension 2: End-to-End Testing (REQUIRED)**
 - **Requirement**: Add comprehensive E2E tests using Playwright or similar
 - **Implementation Details**:
-  - **Core User Flows**: Test complete user journeys
+  - **Core Flows**: Test complete user journeys
     - Browse posts list and pagination
     - Search for posts and verify results
     - Navigate to post details and back
     - Filter posts by user
     - Test responsive design on mobile/tablet/desktop
-  - **Edge Cases**: Test error handling and edge scenarios
-    - Invalid post IDs (404 handling)
-    - Empty search results
-    - Network errors and retry mechanisms
-    - Loading states and skeleton screens
-  - **Visual Testing**: Ensure design matches Figma
+  - **UI Testing**: Ensure design matches Figma
     - Screenshot comparison tests
     - Layout and spacing validation
     - Responsive breakpoint testing
-  - **Performance**: Basic performance validations
-    - Page load times
-    - Image loading and optimization
 - **Expected Files to Create**: 
   - `e2e/` directory with test files
   - `playwright.config.ts` configuration
   - `package.json` updated with E2E scripts
   - GitHub Actions workflow for CI/CD testing (optional bonus)
 
-## 📝 **Submission Requirements**
-
-### **What You Must Deliver:**
-1. **Both extensions implemented** and working perfectly
-2. **Pixel-perfect Figma implementation** - Design must match exactly
-3. **Comprehensive E2E test suite** with good coverage
-4. **Updated documentation** explaining your implementation approach
-5. **Clean git commits** showing your development process
-6. **Live deployment** (Vercel/Netlify) with all features working
-
-### **Evaluation Criteria:**
-- **Design Implementation** (50%) - How accurately the Figma design is implemented
-- **Code Quality** (25%) - Clean, maintainable, TypeScript code
-- **Testing** (20%) - Comprehensive E2E test coverage and quality
-- **User Experience** (5%) - Smooth interactions and responsiveness
-
-## ⏰ **Time Expectation**
-- **Estimated Time**: 4-6 hours for an experienced developer
-- **Focus Areas**: Figma design implementation (70%), E2E testing (30%)
-- **Priority**: Design accuracy is most important - ensure pixel-perfect match
-
 ## 🤔 **Need Help?**
 
 If you have questions about the requirements, feel free to:
 - Create an issue in this repository  
 - Email us at: admin@cvtot.vn
-
-**Good luck! We're excited to see how you extend this application. 🚀**
