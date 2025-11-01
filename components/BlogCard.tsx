@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRightIcon } from '@/components/svgs';
+import { useRouter } from 'next/navigation';
 
 type Props = {
   imageSrc: string;
@@ -10,6 +11,7 @@ type Props = {
   avatarSrc: string;
   nameAuthor?: string;
   date?: string;
+  id: number;
 };
 
 const BlogCard: React.FC<Props> = ({
@@ -20,9 +22,15 @@ const BlogCard: React.FC<Props> = ({
   nameAuthor,
   date,
   avatarSrc,
+  id,
 }) => {
+  const { push } = useRouter();
+
   return (
-    <div className="blogs__card flex flex-col h-full">
+    <div
+      className="blogs__card flex flex-col h-full"
+      onClick={() => push(`/blogs/${id}`)}
+    >
       <Image
         src={imageSrc}
         alt="Blog Image"

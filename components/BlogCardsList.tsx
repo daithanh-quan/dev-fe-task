@@ -25,21 +25,21 @@ const BlogCardsList: React.FC<Props> = ({ posts, isLoading }) => {
     <Fragment>
       <div className="blogs__list-card">
         {visiblePosts.map((post: any) => (
-          <Link href={`/blogs/${post.id}`} key={post.id}>
-            <BlogCard
-              imageSrc={post.thumbnail}
-              title={post.title}
-              name={post.title}
-              description={post.body.substring(0, 120) + '...'}
-              avatarSrc={post.author?.avatar || getUserAvatar(post.userId)}
-              nameAuthor={post.author?.name || 'Unknown Author'}
-              date={new Date(post.publishedAt).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })}
-            />
-          </Link>
+          <BlogCard
+            key={post.id}
+            id={post.id}
+            imageSrc={post.thumbnail}
+            title={post.title}
+            name={post.title}
+            description={post.body.substring(0, 120) + '...'}
+            avatarSrc={post.author?.avatar || getUserAvatar(post.userId)}
+            nameAuthor={post.author?.name || 'Unknown Author'}
+            date={new Date(post.publishedAt).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+            })}
+          />
         ))}
       </div>
 
